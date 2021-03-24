@@ -19,7 +19,6 @@ class EmployeeVacationTrackerResource {
     @Autowired
     private EmployeeVerficationService employeeVerficationService;
 
-    private Gson gson = new Gson();
 
     @GetMapping("/employees")
     public List<Employee> getEmployeeList(){
@@ -28,23 +27,14 @@ class EmployeeVacationTrackerResource {
 
 
     @PostMapping("/employee-work")
-    public String work(@RequestBody InputParam param){
-        try{
-            employeeVerficationService.work(param.getEmployeeId(), param.getDays());
-            return gson.toJson("update successfull");
-        } catch (Exception exception){
-           return gson.toJson(exception.getMessage());
-        }
+    public List<Employee> work(@RequestBody InputParam param) throws Exception {
+        return employeeVerficationService.work(param.getEmployeeId(), param.getDays());
     }
 
 
     @PostMapping("/employee-vacation")
-    public String takeVacation(@RequestBody InputParam param){
-        try{
-            return employeeVerficationService.takeVacation(param.getEmployeeId(), param.getDays());
-        } catch (Exception exception){
-            return exception.getMessage();
-        }
+    public List<Employee> takeVacation(@RequestBody InputParam param) throws Exception {
+        return employeeVerficationService.takeVacation(param.getEmployeeId(), param.getDays());
     }
 
 }

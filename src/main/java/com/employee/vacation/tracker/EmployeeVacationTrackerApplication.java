@@ -33,29 +33,29 @@ public class EmployeeVacationTrackerApplication {
 		employeeList.add(setEmployeeDetails("10H",EmployeeType.HOURLY, 0, 0));
 
 		// salary employees data
-		employeeList.add(setEmployeeDetails("1S", EmployeeType.HOURLY, 0, 0));
-		employeeList.add(setEmployeeDetails("2S", EmployeeType.HOURLY, 0, 0));
-		employeeList.add(setEmployeeDetails("3S", EmployeeType.HOURLY, 0, 0));
-		employeeList.add(setEmployeeDetails("4S", EmployeeType.HOURLY, 0, 0));
-		employeeList.add(setEmployeeDetails("5S", EmployeeType.HOURLY, 0, 0));
-		employeeList.add(setEmployeeDetails("6S", EmployeeType.HOURLY, 0, 0));
-		employeeList.add(setEmployeeDetails("7S", EmployeeType.HOURLY, 0, 0));
-		employeeList.add(setEmployeeDetails("8S", EmployeeType.HOURLY, 0, 0));
-		employeeList.add(setEmployeeDetails("9S", EmployeeType.HOURLY, 0, 0));
-		employeeList.add(setEmployeeDetails("10S",EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("1S", EmployeeType.SALARIED, 0, 0));
+		employeeList.add(setEmployeeDetails("2S", EmployeeType.SALARIED, 0, 0));
+		employeeList.add(setEmployeeDetails("3S", EmployeeType.SALARIED, 0, 0));
+		employeeList.add(setEmployeeDetails("4S", EmployeeType.SALARIED, 0, 0));
+		employeeList.add(setEmployeeDetails("5S", EmployeeType.SALARIED, 0, 0));
+		employeeList.add(setEmployeeDetails("6S", EmployeeType.SALARIED, 0, 0));
+		employeeList.add(setEmployeeDetails("7S", EmployeeType.SALARIED, 0, 0));
+		employeeList.add(setEmployeeDetails("8S", EmployeeType.SALARIED, 0, 0));
+		employeeList.add(setEmployeeDetails("9S", EmployeeType.SALARIED, 0, 0));
+		employeeList.add(setEmployeeDetails("10S",EmployeeType.SALARIED, 0, 0));
 
 
 		// managers data
-		employeeList.add(setEmployeeDetails("1M", EmployeeType.HOURLY, 0, 0));
-		employeeList.add(setEmployeeDetails("2M", EmployeeType.HOURLY, 0, 0));
-		employeeList.add(setEmployeeDetails("3M", EmployeeType.HOURLY, 0, 0));
-		employeeList.add(setEmployeeDetails("4M", EmployeeType.HOURLY, 0, 0));
-		employeeList.add(setEmployeeDetails("5M", EmployeeType.HOURLY, 0, 0));
-		employeeList.add(setEmployeeDetails("6M", EmployeeType.HOURLY, 0, 0));
-		employeeList.add(setEmployeeDetails("7M", EmployeeType.HOURLY, 0, 0));
-		employeeList.add(setEmployeeDetails("8M", EmployeeType.HOURLY, 0, 0));
-		employeeList.add(setEmployeeDetails("9M", EmployeeType.HOURLY, 0, 0));
-		employeeList.add(setEmployeeDetails("10M",EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("1M", EmployeeType.MANAGER, 0, 0));
+		employeeList.add(setEmployeeDetails("2M", EmployeeType.MANAGER, 0, 0));
+		employeeList.add(setEmployeeDetails("3M", EmployeeType.MANAGER, 0, 0));
+		employeeList.add(setEmployeeDetails("4M", EmployeeType.MANAGER, 0, 0));
+		employeeList.add(setEmployeeDetails("5M", EmployeeType.MANAGER, 0, 0));
+		employeeList.add(setEmployeeDetails("6M", EmployeeType.MANAGER, 0, 0));
+		employeeList.add(setEmployeeDetails("7M", EmployeeType.MANAGER, 0, 0));
+		employeeList.add(setEmployeeDetails("8M", EmployeeType.MANAGER, 0, 0));
+		employeeList.add(setEmployeeDetails("9M", EmployeeType.MANAGER, 0, 0));
+		employeeList.add(setEmployeeDetails("10M",EmployeeType.MANAGER, 0, 0));
 		return employeeList;
 	}
 
