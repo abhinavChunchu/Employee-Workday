@@ -12,14 +12,6 @@ import java.util.List;
 @SpringBootApplication
 public class EmployeeVacationTrackerApplication {
 
-	private static  final float HOURLY_VACATION_DAYS = 10;
-
-	private static  final float SALARY_VACATION_DAYS = 15;
-
-	private static  final float MANAGER_VACATION_DAYS = 15;
-
-
-
 	public static void main(String[] args) {
 		SpringApplication.run(EmployeeVacationTrackerApplication.class, args);
 	}
@@ -29,42 +21,41 @@ public class EmployeeVacationTrackerApplication {
 		List<Employee> employeeList = new ArrayList<>();
 
 		// hourly employees data
-		employeeList.add(setEmployeeDetails("1H", EmployeeType.HOURLY, HOURLY_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("2H", EmployeeType.HOURLY, HOURLY_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("3H", EmployeeType.HOURLY, HOURLY_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("4H", EmployeeType.HOURLY, HOURLY_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("5H", EmployeeType.HOURLY, HOURLY_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("6H", EmployeeType.HOURLY, HOURLY_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("7H", EmployeeType.HOURLY, HOURLY_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("8H", EmployeeType.HOURLY, HOURLY_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("9H", EmployeeType.HOURLY, HOURLY_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("10H",EmployeeType.HOURLY, HOURLY_VACATION_DAYS, 0));
+		employeeList.add(setEmployeeDetails("1H", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("2H", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("3H", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("4H", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("5H", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("6H", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("7H", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("8H", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("9H", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("10H",EmployeeType.HOURLY, 0, 0));
 
 		// salary employees data
-		employeeList.add(setEmployeeDetails("1S", EmployeeType.SALARIED, SALARY_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("2S", EmployeeType.SALARIED, SALARY_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("3S", EmployeeType.SALARIED, SALARY_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("4S", EmployeeType.SALARIED, SALARY_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("5S", EmployeeType.SALARIED, SALARY_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("6S", EmployeeType.SALARIED, SALARY_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("7S", EmployeeType.SALARIED, SALARY_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("8S", EmployeeType.SALARIED, SALARY_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("9S", EmployeeType.SALARIED, SALARY_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("10S",EmployeeType.SALARIED, SALARY_VACATION_DAYS, 0));
+		employeeList.add(setEmployeeDetails("1S", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("2S", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("3S", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("4S", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("5S", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("6S", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("7S", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("8S", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("9S", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("10S",EmployeeType.HOURLY, 0, 0));
 
 
 		// managers data
-		employeeList.add(setEmployeeDetails("1M", EmployeeType.MANAGER, MANAGER_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("2M", EmployeeType.MANAGER, MANAGER_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("3M", EmployeeType.MANAGER, MANAGER_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("4M", EmployeeType.MANAGER, MANAGER_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("5M", EmployeeType.MANAGER, MANAGER_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("6M", EmployeeType.MANAGER, MANAGER_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("7M", EmployeeType.MANAGER, MANAGER_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("8M", EmployeeType.MANAGER, MANAGER_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("9M", EmployeeType.MANAGER, MANAGER_VACATION_DAYS, 0));
-		employeeList.add(setEmployeeDetails("10M",EmployeeType.MANAGER, MANAGER_VACATION_DAYS, 0));
-
+		employeeList.add(setEmployeeDetails("1M", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("2M", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("3M", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("4M", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("5M", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("6M", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("7M", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("8M", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("9M", EmployeeType.HOURLY, 0, 0));
+		employeeList.add(setEmployeeDetails("10M",EmployeeType.HOURLY, 0, 0));
 		return employeeList;
 	}
 

@@ -16,8 +16,11 @@ public class EmployeeVerficationService {
     public void work(String employeeId, int days) throws Exception {
         if (days > 260) {
             throw new Exception("Work days exceeded more than 260");
+        } else if(days < 0) {
+            throw new Exception("Work days can't be less than zero");
         }
-        
+
+
         Optional<Employee> optionalEmployee = getFirst(employeeId);
         if (optionalEmployee.isPresent()) {
             Employee employee = optionalEmployee.get();
@@ -67,6 +70,8 @@ public class EmployeeVerficationService {
     private void extracted(int days, Employee employee, int availableVacationDays) {
         float diff = 260 - days;
         if (diff <= availableVacationDays) {
+            employee.setVacationDays(diff);
+        } else if(diff == 0){
             employee.setVacationDays(diff);
         }
     }
