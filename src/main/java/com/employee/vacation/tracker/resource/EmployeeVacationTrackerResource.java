@@ -3,15 +3,13 @@ package com.employee.vacation.tracker.resource;
 import com.employee.vacation.tracker.domain.InputParam;
 import com.employee.vacation.tracker.service.EmployeeVerficationService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import com.employee.vacation.tracker.domain.Employee;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin
 class EmployeeVacationTrackerResource {
 
     @Autowired
@@ -20,7 +18,7 @@ class EmployeeVacationTrackerResource {
     @Autowired
     private EmployeeVerficationService employeeVerficationService;
 
-    @GetMapping("/employee")
+    @GetMapping("/employees")
     public List<Employee> getEmployeeList(){
         return employeeList;
     }
