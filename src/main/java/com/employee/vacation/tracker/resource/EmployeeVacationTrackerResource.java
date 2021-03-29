@@ -2,8 +2,6 @@ package com.employee.vacation.tracker.resource;
 
 import com.employee.vacation.tracker.domain.InputParam;
 import com.employee.vacation.tracker.service.EmployeeVerficationService;
-import com.google.gson.Gson;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.employee.vacation.tracker.domain.Employee;
 
@@ -13,11 +11,14 @@ import java.util.List;
 @CrossOrigin
 class EmployeeVacationTrackerResource {
 
-    @Autowired
-    private List<Employee> employeeList;
+    private final List<Employee> employeeList;
 
-    @Autowired
-    private EmployeeVerficationService employeeVerficationService;
+    private final EmployeeVerficationService employeeVerficationService;
+
+    public EmployeeVacationTrackerResource(List<Employee> employeeList, EmployeeVerficationService employeeVerficationService){
+        this.employeeList = employeeList;
+        this.employeeVerficationService = employeeVerficationService;
+    }
 
 
     @GetMapping("/employees")
