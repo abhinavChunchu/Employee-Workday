@@ -1,7 +1,6 @@
 package com.employee.vacation.tracker.service;
 
 import com.employee.vacation.tracker.domain.Employee;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -10,8 +9,11 @@ import java.util.Optional;
 @Component
 public class EmployeeVerficationService {
 
-    @Autowired
-    private List<Employee> employeeList;
+    private final List<Employee> employeeList;
+
+    public EmployeeVerficationService(List<Employee> employeeList){
+        this.employeeList = employeeList;
+    }
 
     public List<Employee> work(String employeeId, int days) throws Exception {
         if (days > 260) {
@@ -68,13 +70,7 @@ public class EmployeeVerficationService {
     }
 
     private void setVacationDays(int days, Employee employee, int availableVacationDays) {
-        float diff = 260 - days;
-        if (diff == 0) {
-            employee.setVacationDays(availableVacationDays);
-        } else if (diff <= availableVacationDays) {
-            employee.setVacationDays(availableVacationDays - diff);
-        } else {
-            employee.setVacationDays(0);
-        }
+        float vacationDays = ((float) availableVacationDays/260) * days;
+        employee.setVacationDays(vacationDays);
     }
 }
