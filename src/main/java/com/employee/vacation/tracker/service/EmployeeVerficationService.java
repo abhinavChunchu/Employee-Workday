@@ -26,7 +26,7 @@ public class EmployeeVerficationService {
         Optional<Employee> optionalEmployee = getFirst(employeeId);
         if (optionalEmployee.isPresent()) {
             Employee employee = optionalEmployee.get();
-            employee.setWorkingDays(days);
+            employee.setWorkingDays(employee.getWorkingDays()+(float)days);
 
             switch (employee.getEmployeeType()) {
                 case HOURLY:
